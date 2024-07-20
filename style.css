@@ -1,0 +1,10 @@
+.container-homepage {
+  height: 90vh;
+}
+
+.image-wrapper {
+  background-color: black;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
