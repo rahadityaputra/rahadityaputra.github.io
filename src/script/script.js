@@ -5,6 +5,11 @@
   });
 })();
 
+
+AOS.init({
+  duration : 1000
+});
+
 window.onload = function () {
   document
     .getElementById("contact-form")
@@ -56,4 +61,12 @@ window.addEventListener('scroll', function() {
     } else {
       navbar.classList.remove('bg-red-700', 'text-white');
     }
+  });
+
+  var typed = new Typed('#greeting', {
+    strings: ["Hi, I'm Rahaditya.","I'm a Web Developer.", "I Build Interactive Websites."],
+    typeSpeed: 50,
+    loop: true,
+    backSpeed: 25,
+    backDelay: 1500
   });

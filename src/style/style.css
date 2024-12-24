@@ -1,33 +1,63 @@
 .my-skills div:hover {
-    transform: scale(1.1); /* Membesar 10% */
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+  transform: scale(1.1); /* Membesar 10% */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
 }
 
+/* Custom Liverpool Colors */
+.bg-liverpool-red {
+  background-color: #c8102e; /* Liverpool red */
+}
+.text-liverpool-white {
+  color: #ffffff; /* White */
+}
+.hover-bg-liverpool-red:hover {
+  background-color: #c8102e; /* Liverpool red */
+}
+.hover-text-liverpool-red:hover {
+  color: #c8102e; /* Liverpool red */
+}
 
-  /* Custom Liverpool Colors */
-  .bg-liverpool-red {
-    background-color: #C8102E; /* Liverpool red */
-  }
-  .text-liverpool-white {
-    color: #FFFFFF; /* White */
-  }
-  .hover-bg-liverpool-red:hover {
-    background-color: #C8102E; /* Liverpool red */
-  }
-  .hover-text-liverpool-red:hover {
-    color: #C8102E; /* Liverpool red */
-  }
+body {
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
 
-  body {
-    font-family: 'Roboto', sans-serif;
-  }
-  h1, h2, h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-  }
+#hero {
+  background: linear-gradient(to bottom, #c8102e, #9b1b30);
+  color: white;
+}
 
-  #hero {
-    background: linear-gradient(to bottom, #C8102E, #9B1B30);
-    color: white;
-  }
+.bebas-neue-regular {
+  font-family: "Bebas Neue", serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
+/* Ensures smooth animations */
+.transition {
+  transition: all 0.3s ease;
+}
+
+/* Hover scale for inputs, buttons, and modal */
+.transform:hover {
+  transform: scale(1.05);
+}
+
+/* Button and modal color updates */
+.bg-red-600 {
+  background-color: #d80032; /* Liverpool Red */
+}
+.bg-red-700 {
+  background-color: #c3002f;
+}
+.hover\:bg-red-700:hover {
+  background-color: #c3002f;
+}
+.focus\:ring-red-600:focus {
+  ring-color: #d80032;
+}
