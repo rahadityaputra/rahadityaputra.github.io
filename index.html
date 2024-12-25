@@ -7,7 +7,7 @@
     <!-- Include Tailwind CSS from CDN -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="src/style/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Montserrat:wght@700&display=swap"
       rel="stylesheet"
@@ -23,43 +23,50 @@
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
       rel="stylesheet"
     />
-
+    <link href="css/hamburgers.css" rel="stylesheet" />
     <!-- Agar kirim pesan berfungsi -->
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
     ></script>
-
-    
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   </head>
   <body class="bg-gray-100 text-gray-900 font-sans">
     <!-- Header -->
     <header class="text-liverpool-white py-4">
       <nav
         id="navbar"
-        class="bg-white text-black p-4 fixed top-0 w-full z-10 flex flex-col lg:flex-row justify-between"
+        class="bg-white text-black p-4 fixed top-0 w-full z-10 flex flex-col lg:flex-row justify-between  "
       >
-        <div class="brand">
-          <span class="bebas-neue-regular">rahadityaputra</span>
+        <div class="top flex justify-between items-center">
+          <div class="brand">
+            <span class="bebas-neue-regular text-3xl">rahadityaputra</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <button class="hamburger hamburger--elastic lg:hidden" type="button">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
         </div>
-        <div class="flex items-center justify-between">
-          <button id="menu-toggle" class="lg:hidden text-black">
-            <i class="fas fa-bars"></i>
-          </button>
+
+
+        <div class="bottom">
+          <ul id="menu" class="lg:flex hidden space-x-6">
+            <li><a href="#home" class="hover:text-red-700">Home</a></li>
+            <li><a href="#about" class="hover:text-red-700">About</a></li>
+            <li><a href="#projects" class="hover:text-red-700">Projects</a></li>
+            <li><a href="#contact" class="hover:text-red-700">Contact</a></li>
+          </ul>
+          <ul id="mobile-menu" class="lg:hidden hidden space-y-4">
+            <li><a href="#home" class="hover:text-red-700">Home</a></li>
+            <li><a href="#about" class="hover:text-red-700">About</a></li>
+            <li><a href="#projects" class="hover:text-red-700">Projects</a></li>
+            <li><a href="#contact" class="hover:text-red-700">Contact</a></li>
+          </ul>
         </div>
-        <ul id="menu" class="lg:flex hidden space-x-6">
-          <li><a href="#home" class="hover:text-red-700">Home</a></li>
-          <li><a href="#about" class="hover:text-red-700">About</a></li>
-          <li><a href="#projects" class="hover:text-red-700">Projects</a></li>
-          <li><a href="#contact" class="hover:text-red-700">Contact</a></li>
-        </ul>
-        <ul id="mobile-menu" class="lg:hidden hidden space-y-4">
-          <li><a href="#home" class="hover:text-red-700">Home</a></li>
-          <li><a href="#about" class="hover:text-red-700">About</a></li>
-          <li><a href="#projects" class="hover:text-red-700">Projects</a></li>
-          <li><a href="#contact" class="hover:text-red-700">Contact</a></li>
-        </ul>
       </nav>
     </header>
 
@@ -71,9 +78,7 @@
         data-aos="fade-up"
         class="text-4xl md:text-5xl font-bold mb-4 leading-tight"
         id="greeting"
-      >
-        Hi, I'm Rahaditya
-      </h1>
+      ></h1>
       <p
         data-aos="fade-up"
         data-aos-delay="200"
@@ -353,7 +358,7 @@
 
     <section id="contact" class="py-16 px-4 bg-white text-center">
       <h1 class="text-4xl font-semibold mb-8 text-gray-900">Contact Me</h1>
-      <form id="contact-form" class="max-w-xl mx-auto space-y-6">
+      <form id="contact-form" class="max-w-xl mx-auto space-y-6" method="post">
         <div>
           <label for="name" class="block text-left text-lg text-gray-700"
             >Name</label
@@ -410,8 +415,7 @@
         <div class="flex justify-between items-center">
           <h2 class="text-xl font-semibold text-red-600">Pesan Terkirim!</h2>
           <button
-            onclick="closeModal()"
-            class="text-gray-500 hover:text-gray-700"
+            class="close-modal text-gray-500 hover:text-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -435,8 +439,7 @@
         </p>
         <div class="mt-6 flex justify-end">
           <button
-            onclick="closeModal()"
-            class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300"
+            class="close-modal bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300"
           >
             Tutup
           </button>
@@ -453,8 +456,7 @@
         <div class="flex justify-between items-center">
           <h2 class="text-xl font-semibold text-green-600">Pesan Terkirim!</h2>
           <button
-            onclick="closeModal()"
-            class="text-gray-500 hover:text-gray-700"
+            class="close-modal text-gray-500 hover:text-gray-700"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -478,8 +480,7 @@
         </p>
         <div class="mt-6 flex justify-end">
           <button
-            onclick="closeModal()"
-            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+            class="close-modal bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
           >
             Tutup
           </button>
@@ -492,7 +493,6 @@
       <p>&copy; 2024 My Personal Web. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="src/script/script.js"></script>
+    <script src="js/main.js" type="module"></script>
   </body>
 </html>
